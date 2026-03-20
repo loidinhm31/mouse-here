@@ -7,10 +7,11 @@ program
   .name("mouse-here")
   .description("Mouse jiggler to keep your status active")
   .version("1.0.0")
+  .argument("[seconds]", "jiggle interval in seconds")
   .option("-i, --interval <seconds>", "jiggle interval in seconds", "30")
   .option("-v, --verbose", "show each jiggle event", false)
-  .action(async (opts) => {
-    const intervalSec = parseInt(opts.interval, 10);
+  .action(async (seconds, opts) => {
+    const intervalSec = parseInt(seconds ?? opts.interval, 10);
     if (isNaN(intervalSec) || intervalSec < 1) {
       console.error("Error: interval must be a positive number");
       process.exit(1);
