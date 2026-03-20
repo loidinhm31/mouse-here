@@ -35,21 +35,26 @@ npm install
 npm start
 
 # Custom interval (every 15 seconds)
-npm start -- -i 15
+npm start -- 15
+npm start -- --interval 15
 
 # Verbose mode (logs each jiggle)
-npm start -- -v
+npm start -- --verbose
 
 # Both
-npm start -- -i 15 -v
+npm start -- --verbose 15
+npm start -- --verbose --interval 15
 ```
 
 ### Options
 
 | Flag | Description | Default |
 |---|---|---|
-| `-i, --interval <seconds>` | Jiggle interval | `30` |
-| `-v, --verbose` | Log each jiggle event | `off` |
+| `[seconds]` | Jiggle interval (positional) | `30` |
+| `--interval <seconds>` | Jiggle interval | `30` |
+| `--verbose` | Log each jiggle event | `off` |
+
+> **Windows note:** Use `--interval` and `--verbose` (long-form). Short flags like `-i` and `-v` may be intercepted by PowerShell or npm before reaching the script.
 
 ## Notes
 
