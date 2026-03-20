@@ -9,7 +9,7 @@ program
   .version("1.0.0")
   .argument("[seconds]", "jiggle interval in seconds")
   .option("-i, --interval <seconds>", "jiggle interval in seconds", "30")
-  .option("-v, --verbose", "show each jiggle event", false)
+  .option("--verbose", "show each jiggle event", false)
   .action(async (seconds, opts) => {
     const intervalSec = parseInt(seconds ?? opts.interval, 10);
     if (isNaN(intervalSec) || intervalSec < 1) {
