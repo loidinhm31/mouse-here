@@ -1,0 +1,26 @@
+{
+  "name": "mouse-here",
+  "version": "1.0.0",
+  "description": "Mouse jiggler CLI to keep your status active",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx --watch src/index.ts"
+  },
+  "keywords": [
+    "mouse",
+    "jiggler",
+    "teams",
+    "status"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^14.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
